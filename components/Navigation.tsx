@@ -93,7 +93,7 @@ export default function Navigation() {
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600"
                       layoutId="activeSection"
                       initial={false}
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      transition={{ type: 'spring' as const, stiffness: 380, damping: 30 }}
                     />
                   )}
                 </motion.a>

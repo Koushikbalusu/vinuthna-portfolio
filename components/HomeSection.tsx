@@ -112,7 +112,7 @@ export default function HomeSection() {
             className="inline-block mb-8"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3, type: 'spring' }}
+            transition={{ duration: 0.6, delay: 0.3, type: 'spring' as const }}
           >
             <motion.div
               className="glass-effect-strong px-6 py-2 rounded-full"
@@ -151,7 +151,7 @@ export default function HomeSection() {
               className="block text-gradient glow-text"
               initial={{ opacity: 0, scale: 0.9, rotateY: 45 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, type: 'spring' }}
+              transition={{ duration: 0.8, delay: 0.6, type: 'spring' as const }}
               whileHover={{
                 scale: 1.05,
                 textShadow: '0 0 40px rgba(14, 165, 233, 0.6)',

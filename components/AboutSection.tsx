@@ -15,7 +15,7 @@ const abilities = [
 ]
 
 export default function AboutSection() {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const containerVariants = useMemo(() => ({
@@ -36,7 +36,7 @@ export default function AboutSection() {
       scale: 1,
       transition: {
         duration: 0.5,
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 200,
         damping: 20,
       },
@@ -143,14 +143,14 @@ export default function AboutSection() {
                 variants={itemVariants}
               >
                 <span className="text-3xl font-display text-gradient mr-2">Started</span>
-                my digital journey as a curious explorer from <span className="font-heading font-semibold text-blue-600">Siddipet, Telangana</span>, fascinated by coding and the limitless world of web technologies. I'm currently pursuing a <span className="font-heading font-semibold text-purple-600">B.Sc. in Computer Science</span> at the <span className="font-heading font-semibold text-indigo-600">Nxtwave Institute of Advanced Technology</span>.
+                my digital journey as a curious explorer from <span className="font-heading font-semibold text-blue-600">Siddipet, Telangana</span>, fascinated by coding and the limitless world of web technologies. I&apos;m currently pursuing a <span className="font-heading font-semibold text-purple-600">B.Sc. in Computer Science</span> at the <span className="font-heading font-semibold text-indigo-600">Nxtwave Institute of Advanced Technology</span>.
               </motion.p>
 
               <motion.p
                 className="text-xl md:text-2xl text-slate-700 leading-relaxed mb-8 font-body"
                 variants={itemVariants}
               >
-                I've developed a <span className="font-heading font-semibold text-gradient-2">strong passion for Frontend Development</span>, where creativity meets logic. From building responsive web pages with <span className="font-heading text-blue-600">HTML & CSS</span> to exploring <span className="font-heading text-purple-600">Python, SQL, and Figma</span>, every skill has been a new level unlocked in my developer journey.
+                I&apos;ve developed a <span className="font-heading font-semibold text-gradient-2">strong passion for Frontend Development</span>, where creativity meets logic. From building responsive web pages with <span className="font-heading text-blue-600">HTML & CSS</span> to exploring <span className="font-heading text-purple-600">Python, SQL, and Figma</span>, every skill has been a new level unlocked in my developer journey.
               </motion.p>
 
               <motion.p
@@ -191,7 +191,7 @@ export default function AboutSection() {
                         rotateX: 3,
                         boxShadow: '0 15px 40px rgba(14, 165, 233, 0.25)',
                       }}
-                      transition={{ type: 'spring', stiffness: 400, damping: 25, duration: 0.2 }}
+                      transition={{ type: 'spring' as const, stiffness: 400, damping: 25, duration: 0.2 }}
                       style={{ transform: 'translateZ(0)' }}
                     >
                       {/* Gradient Background on Hover */}

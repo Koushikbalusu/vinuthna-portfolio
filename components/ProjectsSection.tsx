@@ -57,7 +57,7 @@ const projects = [
 ]
 
 export default function ProjectsSection() {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: false, margin: '-150px' })
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -94,7 +94,7 @@ export default function ProjectsSection() {
       scale: 1,
       transition: {
         duration: 0.4,
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 300,
         damping: 25,
       },
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
                       y: -6,
                     }}
                     transition={{ 
-                      type: 'spring', 
+                      type: 'spring' as const, 
                       stiffness: 500, 
                       damping: 30,
                       duration: 0.25

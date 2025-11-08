@@ -6,7 +6,7 @@ import { useRef, useState, useMemo } from 'react'
 import { Send, Mail, MessageSquare, User, Github, Linkedin } from 'lucide-react'
 
 export default function ContactSection() {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [formData, setFormData] = useState({
     name: '',
@@ -90,7 +90,7 @@ export default function ContactSection() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Let's <span className="text-gradient">Connect</span>
+              Let&apos;s <span className="text-gradient">Connect</span>
             </motion.h2>
             <motion.p
               className="text-lg md:text-xl text-slate-600 mt-4 font-body max-w-2xl mx-auto"
@@ -98,7 +98,7 @@ export default function ContactSection() {
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Have a project in mind? Let's collaborate and create something amazing together!
+              Have a project in mind? Let&apos;s collaborate and create something amazing together!
             </motion.p>
           </motion.div>
 
@@ -259,10 +259,10 @@ export default function ContactSection() {
             >
               <div>
                 <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 text-slate-800">
-                  Let's <span className="text-gradient-2">Collaborate</span>
+                  Let&apos;s <span className="text-gradient-2">Collaborate</span>
                 </h3>
                 <p className="text-lg text-slate-600 mb-8 font-body leading-relaxed">
-                  I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                  I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                 </p>
               </div>
 
