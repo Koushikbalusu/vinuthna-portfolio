@@ -89,7 +89,8 @@ pnpm dev
 
 ## 🛠️ Tech Stack
 
-- **Next.js 14** - React framework
+- **Next.js 15** - React framework
+- **React 19** - UI library
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Utility-first styling
 - **Framer Motion** - Animation library
@@ -139,6 +140,33 @@ The website is fully responsive and optimized for:
 npm run build
 npm start
 ```
+
+## 🚀 Deployment
+
+This project is deployment-ready and can be deployed to various platforms:
+
+### Quick Deploy
+
+**Vercel (Recommended)**
+```bash
+npm i -g vercel
+vercel
+```
+
+**Netlify**
+- Connect your Git repository
+- Build command: `npm run build`
+- Publish directory: `.next`
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+### Pre-Deployment Checklist
+
+- [ ] Run `npm run build` to ensure the project builds successfully
+- [ ] Set environment variables in your deployment platform
+- [ ] Update project links in `components/ProjectsSection.tsx`
+- [ ] Update social media links in `components/ContactSection.tsx`
+- [ ] Test the production build locally: `npm run build && npm start`
 
 ## 📄 License
 
