@@ -23,12 +23,11 @@ const nextConfig = {
     }
     
     // Alias React to ensure single instance (prevents multiple React instances)
+    // Only alias react and react-dom, let Next.js handle jsx-runtime automatically
     config.resolve.alias = {
       ...config.resolve.alias,
       react: require.resolve('react'),
       'react-dom': require.resolve('react-dom'),
-      'react/jsx-runtime': require.resolve('react/jsx-runtime'),
-      'react/jsx-dev-runtime': require.resolve('react/jsx-dev-runtime'),
     };
     
     // Prevent duplicate React instances in bundle
