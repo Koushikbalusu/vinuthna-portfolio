@@ -227,7 +227,7 @@ export default function AboutSection() {
             variants={itemVariants}
           >
             <motion.a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1syxQ4n1-bNcX3-t44rTsBTJqY3g-8I46/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white rounded-full font-heading font-semibold text-lg shadow-2xl overflow-hidden will-change-transform"
